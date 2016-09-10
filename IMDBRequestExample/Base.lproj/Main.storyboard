@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +17,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8iN-do-DWb" userLabel="Movie Name TextField">
+                                <rect key="frame" x="25" y="40" width="550" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="Ies-pj-ASq"/>
+                                    <constraint firstAttribute="height" constant="40" id="wIM-iJ-OVY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ies-pj-ASq"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oev-6f-Ku1">
+                                <rect key="frame" x="305.5" y="90" width="269.5" height="41"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.47843137250000001" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Show Data">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showDataAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBs-hi-Nsc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-Qc-RHI">
+                                <rect key="frame" x="25" y="90" width="269.5" height="41"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.47843137250000001" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Find Data">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findDataAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mnA-zM-4El"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="black" keyboardDismissMode="onDrag" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="kJy-iR-2Ot">
+                                <rect key="frame" x="25" y="156" width="550" height="419"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dVM-Qc-RHI" firstAttribute="leading" secondItem="8iN-do-DWb" secondAttribute="leading" id="7w7-af-OiX"/>
+                            <constraint firstAttribute="trailing" secondItem="8iN-do-DWb" secondAttribute="trailing" constant="25" id="8ec-bs-DhP"/>
+                            <constraint firstItem="dVM-Qc-RHI" firstAttribute="top" secondItem="8iN-do-DWb" secondAttribute="bottom" constant="10" id="B0t-mU-PCf"/>
+                            <constraint firstItem="8iN-do-DWb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ByL-C9-ba7"/>
+                            <constraint firstItem="dVM-Qc-RHI" firstAttribute="width" secondItem="8iN-do-DWb" secondAttribute="width" multiplier="0.49" id="CNN-2T-CVD"/>
+                            <constraint firstItem="dVM-Qc-RHI" firstAttribute="width" secondItem="oev-6f-Ku1" secondAttribute="width" id="MXr-k6-bZP"/>
+                            <constraint firstItem="dVM-Qc-RHI" firstAttribute="top" secondItem="8iN-do-DWb" secondAttribute="bottom" constant="8" id="ccK-Je-XqG"/>
+                            <constraint firstItem="oev-6f-Ku1" firstAttribute="top" secondItem="8iN-do-DWb" secondAttribute="bottom" constant="10" id="cdo-7D-6hy"/>
+                            <constraint firstItem="oev-6f-Ku1" firstAttribute="trailing" secondItem="8iN-do-DWb" secondAttribute="trailing" id="cfT-D8-ogX"/>
+                            <constraint firstItem="8iN-do-DWb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="fOR-su-gS4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kJy-iR-2Ot" secondAttribute="bottom" constant="25" id="hjK-wQ-Jw7"/>
+                            <constraint firstItem="oev-6f-Ku1" firstAttribute="trailing" secondItem="8iN-do-DWb" secondAttribute="trailing" id="j6N-1A-iDU"/>
+                            <constraint firstAttribute="trailing" secondItem="kJy-iR-2Ot" secondAttribute="trailing" constant="25" id="jO6-rY-BxQ"/>
+                            <constraint firstItem="kJy-iR-2Ot" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="opR-2J-vVf"/>
+                            <constraint firstItem="8iN-do-DWb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="s9K-iW-F5U"/>
+                            <constraint firstItem="kJy-iR-2Ot" firstAttribute="top" secondItem="dVM-Qc-RHI" secondAttribute="bottom" constant="25" id="wHP-HN-KoG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ccK-Je-XqG"/>
+                                <exclude reference="j6N-1A-iDU"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="dataTextView" destination="kJy-iR-2Ot" id="Rg2-B0-XEF"/>
+                        <outlet property="findDataButton" destination="oev-6f-Ku1" id="6hB-S2-Ns3"/>
+                        <outlet property="movieNameTextField" destination="8iN-do-DWb" id="IPF-ul-hXN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
