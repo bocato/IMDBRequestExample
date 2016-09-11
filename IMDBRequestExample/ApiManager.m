@@ -17,10 +17,13 @@ static NSString *const kBaseURL = @"https://www.omdbapi.com/";
 
 - (NSURLSessionDataTask *)getMovieWithName:(NSString *)name success:(void (^)(Movie *response))success failure:(void (^)(NSError *error))failure{
     
-    NSString *requestUrl = [kBaseURL stringByAppendingString:[NSString stringWithFormat:@"?t=%@", name ?: @""]];
+    NSString *requestUrl = kBaseURL;
+    NSDictionary *parameters = @{@"t": name ?: @""};
     
-    return [self GET:requestUrl parameters:nil
+    return [self GET:requestUrl parameters:parameters
              success:^(NSURLSessionDataTask *task, id responseObject) {
+                 
+                 NSLog(@"RequestURL: %@", task.currentRequest.URL);
                  
                  NSDictionary *responseDictionary = (NSDictionary *)responseObject;
                  

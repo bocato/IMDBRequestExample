@@ -20,6 +20,7 @@
 		E501F2ED1D838403009ECAAC /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = E501F2EC1D838403009ECAAC /* Movie.m */; };
 		E501F2F01D8388CD009ECAAC /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E501F2EF1D8388CD009ECAAC /* ApiManager.m */; };
 		E501F2F31D8388E9009ECAAC /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E501F2F21D8388E9009ECAAC /* SessionManager.m */; };
+		E501F3011D859A1E009ECAAC /* MBProgressHUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E501F3001D859A1E009ECAAC /* MBProgressHUDHelper.m */; };
 		ECCD008F22C2F6B72F59950E /* libPods-IMDBRequestExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D65A2E2CD61BD2EBBD0ED9AF /* libPods-IMDBRequestExampleTests.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		E501F2EF1D8388CD009ECAAC /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 		E501F2F11D8388E9009ECAAC /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
 		E501F2F21D8388E9009ECAAC /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
+		E501F2FF1D859A1E009ECAAC /* MBProgressHUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUDHelper.h; sourceTree = "<group>"; };
+		E501F3001D859A1E009ECAAC /* MBProgressHUDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUDHelper.m; sourceTree = "<group>"; };
 		EC30AB4EC9529C3A4ED5581C /* libPods-IMDBRequestExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IMDBRequestExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D2B75929B40606C6481757 /* Pods-IMDBRequestExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBRequestExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMDBRequestExampleTests/Pods-IMDBRequestExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +153,7 @@
 		E501F2B31D837F2F009ECAAC /* IMDBRequestExample */ = {
 			isa = PBXGroup;
 			children = (
+				E501F2FE1D859A13009ECAAC /* Commons */,
 				E501F2EA1D8383EB009ECAAC /* Service */,
 				E501F2E91D8383E6009ECAAC /* Model */,
 				E501F2E81D8383D5009ECAAC /* Controllers */,
@@ -225,6 +229,15 @@
 				E501F2F21D8388E9009ECAAC /* SessionManager.m */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		E501F2FE1D859A13009ECAAC /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				E501F2FF1D859A1E009ECAAC /* MBProgressHUDHelper.h */,
+				E501F3001D859A1E009ECAAC /* MBProgressHUDHelper.m */,
+			);
+			name = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,6 +506,7 @@
 				E501F2BC1D837F30009ECAAC /* ViewController.m in Sources */,
 				E501F2B91D837F2F009ECAAC /* AppDelegate.m in Sources */,
 				E501F2ED1D838403009ECAAC /* Movie.m in Sources */,
+				E501F3011D859A1E009ECAAC /* MBProgressHUDHelper.m in Sources */,
 				E501F2B61D837F2F009ECAAC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
